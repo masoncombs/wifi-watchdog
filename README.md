@@ -45,7 +45,6 @@ Wi-Fi Watchdog is a modern, robust C# WinForms tray application for automatic Wi
   - Cleans up all settings, registry entries, scheduled tasks, and desktop shortcuts.
 
 - **Reliability & Professionalism**
-  - Only one tray icon is ever shown.
   - All privilege and startup logic is robust and user-friendly.
   - Designed for reliability, security, and ease of use.
 
