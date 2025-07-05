@@ -109,4 +109,6 @@ This project is open source and available under the MIT License.
 
 ---
 
+DisclaimerThis application is intended for personal use only. The author is not responsible for any damages or issues caused by its use.
+
 For more information, feature requests, or contributions, please visit the [GitHub repository](https://github.com/masoncombs/wifi-watchdog).
