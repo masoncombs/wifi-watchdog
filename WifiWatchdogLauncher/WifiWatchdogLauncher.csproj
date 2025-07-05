@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>WifiWatchdogLauncher</RootNamespace>
+    <AssemblyName>WifiWatchdogLauncher</AssemblyName>
+    <OutputPath>..\BuildOutput\Debug\net6.0-windows\</OutputPath>
+    <!-- <ApplicationIcon>WifiWatchdog.ico</ApplicationIcon> -->
+  </PropertyGroup>
+</Project>
