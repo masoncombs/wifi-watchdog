@@ -145,12 +145,23 @@ namespace WifiWatchdogApp
 
         private void LoadWifiNetworks()
         {
-            comboBoxSsids.Items.Clear();
+            var currentSelection = comboBoxSsids.SelectedItem?.ToString();
+            var userHasSelected = !string.IsNullOrEmpty(currentSelection);
             var ssids = GetAvailableSsids();
+            comboBoxSsids.Items.Clear();
             foreach (var ssid in ssids)
                 comboBoxSsids.Items.Add(ssid);
-            if (comboBoxSsids.Items.Contains(SelectedSsid))
+            // If user has selected an SSID, keep it selected even if not in the refreshed list
+            if (userHasSelected)
+            {
+                if (!comboBoxSsids.Items.Contains(currentSelection))
+                    comboBoxSsids.Items.Add(currentSelection); // Add missing SSID back for selection
+                comboBoxSsids.SelectedItem = currentSelection;
+            }
+            else if (comboBoxSsids.Items.Contains(SelectedSsid))
+            {
                 comboBoxSsids.SelectedItem = SelectedSsid;
+            }
         }
 
         private string[] GetAvailableSsids()
@@ -294,12 +305,14 @@ namespace WifiWatchdogApp
             try { RemoveScheduledTask(); } catch { }
             try
             {
-                // Reset AutoRunPromptShown in user settings
+                // Reset AutoRunPromptShown and clear protected Wi-Fi settings
                 Properties.Settings.Default["AutoRunPromptShown"] = false;
+                Properties.Settings.Default["ProtectedSsid"] = string.Empty;
+                Properties.Settings.Default["ProtectedWifiPassword"] = string.Empty;
                 Properties.Settings.Default.Save();
             }
             catch { }
-            MessageBox.Show("First-run state has been reset. The launcher will prompt again next time.", "Reset Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("First-run state has been reset. The launcher will prompt for Wi-Fi selection next time.", "Reset Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

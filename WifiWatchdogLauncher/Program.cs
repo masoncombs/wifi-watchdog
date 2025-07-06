@@ -4,6 +4,7 @@ using System.IO;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Media;
+using System.Linq;
 
 namespace WifiWatchdogLauncher
 {
@@ -24,9 +25,80 @@ namespace WifiWatchdogLauncher
                 darkMode
             );
             if (result != DialogResult.Yes)
-                return;
+            {
+                // Only exit if user explicitly says No or closes the dialog
+                Environment.Exit(0);
+            }
 
-            // Only prompt for auto-run if not already shown
+            // Wait for first-run Wi-Fi setup to complete before prompting for auto-run
+            string appData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            string configDir = Path.Combine(appData, "WifiWatchdogApp");
+            string[] configFiles = Directory.Exists(configDir) ? Directory.GetFiles(configDir, "user.config", SearchOption.AllDirectories) : new string[0];
+            bool firstRunComplete = false;
+            if (configFiles.Length > 0)
+            {
+                try
+                {
+                    var config = System.Xml.Linq.XDocument.Load(configFiles[0]);
+                    var elem = config.Descendants("setting").FirstOrDefault(e => (string)e.Attribute("name") == "FirstRunComplete");
+                    if (elem != null)
+                    {
+                        var valueElem = elem.Element("value");
+                        if (valueElem != null && bool.TryParse(valueElem.Value, out bool firstRunResult))
+                            firstRunComplete = firstRunResult;
+                    }
+                }
+                catch { }
+            }
+            string appPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "WifiWatchdogApp.exe");
+            if (!firstRunComplete)
+            {
+                // Start main app for first-run Wi-Fi setup and wait for it to exit
+                if (!File.Exists(appPath))
+                {
+                    DarkPromptForm.ShowInfo($"Could not find WifiWatchdogApp.exe at {appPath}", "Error", darkMode);
+                    return;
+                }
+                var psi = new ProcessStartInfo(appPath, "--firstrun")
+                {
+                    UseShellExecute = true,
+                    Verb = "runas",
+                    WorkingDirectory = Path.GetDirectoryName(appPath)
+                };
+                try { Process.Start(psi)?.WaitForExit(); } catch (Exception ex)
+                {
+                    DarkPromptForm.ShowInfo(
+                        "Failed to start WifiWatchdogApp.\n" + ex.Message,
+                        "Wi-Fi Watchdog Error",
+                        darkMode
+                    );
+                    return;
+                }
+                // Re-check flag after main app exits
+                configFiles = Directory.Exists(configDir) ? Directory.GetFiles(configDir, "user.config", SearchOption.AllDirectories) : new string[0];
+                if (configFiles.Length > 0)
+                {
+                    try
+                    {
+                        var config = System.Xml.Linq.XDocument.Load(configFiles[0]);
+                        var elem = config.Descendants("setting").FirstOrDefault(e => (string)e.Attribute("name") == "FirstRunComplete");
+                        if (elem != null)
+                        {
+                            var valueElem = elem.Element("value");
+                            if (valueElem != null && bool.TryParse(valueElem.Value, out bool firstRunResult2))
+                                firstRunComplete = firstRunResult2;
+                        }
+                    }
+                    catch { }
+                }
+                if (!firstRunComplete)
+                {
+                    // User cancelled first-run setup, exit launcher
+                    return;
+                }
+            }
+            // After first-run and auto-run prompt, always start the main app for normal operation
+            // Prompt for auto-run if needed
             if (!SettingsReader.GetAutoRunPromptShown())
             {
                 string launcherPath = Application.ExecutablePath;
@@ -83,20 +155,19 @@ namespace WifiWatchdogLauncher
                 catch { /* Ignore errors creating shortcut */ }
             }
 
-            // After all setup, start the main app and exit.
-            string appPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "WifiWatchdogApp.exe");
+            // Always start the main app for normal operation
             if (!File.Exists(appPath))
             {
                 DarkPromptForm.ShowInfo($"Could not find WifiWatchdogApp.exe at {appPath}", "Error", darkMode);
                 return;
             }
-            var psi = new ProcessStartInfo(appPath)
+            var psi2 = new ProcessStartInfo(appPath)
             {
                 UseShellExecute = true,
                 Verb = "runas",
                 WorkingDirectory = Path.GetDirectoryName(appPath)
             };
-            try { Process.Start(psi); } catch (Exception ex)
+            try { Process.Start(psi2); } catch (Exception ex)
             {
                 DarkPromptForm.ShowInfo(
                     "Failed to start WifiWatchdogApp.\n" + ex.Message,

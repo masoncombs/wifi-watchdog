@@ -142,5 +142,41 @@ namespace WifiWatchdogApp.Properties {
                 this["AutoRunPromptShown"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ProtectedSsid {
+            get {
+                return ((string)(this["ProtectedSsid"]));
+            }
+            set {
+                this["ProtectedSsid"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ProtectedWifiPassword {
+            get {
+                return ((string)(this["ProtectedWifiPassword"]));
+            }
+            set {
+                this["ProtectedWifiPassword"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool FirstRunComplete {
+            get {
+                return ((bool)(this["FirstRunComplete"]));
+            }
+            set {
+                this["FirstRunComplete"] = value;
+            }
+        }
     }
 }

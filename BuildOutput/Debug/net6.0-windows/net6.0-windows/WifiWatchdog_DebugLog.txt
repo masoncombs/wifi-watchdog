@@ -1,75 +1,154 @@
-[2025-07-05 01:24:44] Ping to www.google.com failed.
-[2025-07-05 01:24:47] Ping to www.google.com failed.
-[2025-07-05 01:24:48] TryReconnect called.
-[2025-07-05 01:25:02] Ping to gateway 192.168.1.1: Success
-[2025-07-05 01:25:03] Ping to internet target www.google.com: Success
-[2025-07-05 01:25:03] Reconnect attempt triggered.
-[2025-07-05 01:28:02] App started. Monitoring SSID: goldenwifi
-[2025-07-05 01:29:15] App started. Monitoring SSID: goldenwifi
-[2025-07-05 01:31:04] App started. Monitoring SSID: goldenwifi
-[2025-07-05 01:34:50] App started. Monitoring SSID: goldenwifi
-[2025-07-05 01:36:05] App started. Monitoring SSID: goldenwifi
-[2025-07-05 01:38:08] App started. Monitoring SSID: goldenwifi
-[2025-07-05 01:39:43] App started. Monitoring SSID: goldenwifi
-[2025-07-05 01:43:38] App started. Monitoring SSID: goldenwifi
-[2025-07-05 01:44:06] App started. Monitoring SSID: goldenwifi
-[2025-07-05 01:44:42] App started. Monitoring SSID: goldenwifi
-[2025-07-05 01:46:40] App started. Monitoring SSID: goldenwifi
-[2025-07-05 01:55:05] App started. Monitoring SSID: goldenwifi
-[2025-07-05 01:57:02] App started. Monitoring SSID: goldenwifi
-[2025-07-05 01:57:26] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:00:17] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:00:52] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:01:05] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:15:32] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:15:56] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:16:05] Ping to www.google.com failed.
-[2025-07-05 02:16:08] Ping to www.google.com failed.
-[2025-07-05 02:16:10] Wi-Fi disconnected. Attempting to reconnect.
-[2025-07-05 02:16:10] TryReconnect called.
-[2025-07-05 02:16:24] Ping to gateway 192.168.1.1: Success
-[2025-07-05 02:16:24] Ping to internet target www.google.com: Success
-[2025-07-05 02:16:24] Wi-Fi reconnected successfully.
-[2025-07-05 02:16:24] Reconnect attempt triggered.
-[2025-07-05 02:23:40] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:23:57] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:24:21] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:24:48] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:24:55] Ping to www.google.com failed.
-[2025-07-05 02:24:58] Ping to www.google.com failed.
-[2025-07-05 02:24:59] Wi-Fi disconnected. Attempting to reconnect.
-[2025-07-05 02:24:59] TryReconnect called.
-[2025-07-05 02:25:13] Ping to gateway 192.168.1.1: Success
-[2025-07-05 02:25:13] Ping to internet target www.google.com: Success
-[2025-07-05 02:25:13] Wi-Fi reconnected successfully.
-[2025-07-05 02:25:13] Reconnect attempt triggered.
-[2025-07-05 02:30:53] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:31:09] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:33:39] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:36:25] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:38:11] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:38:32] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:40:43] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:41:20] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:41:31] App started. Monitoring SSID: goldenwifi
-[2025-07-05 02:41:44] Ping to www.google.com failed.
-[2025-07-05 02:41:47] Ping to www.google.com failed.
-[2025-07-05 02:41:49] Wi-Fi disconnected. Attempting to reconnect.
-[2025-07-05 02:41:49] TryReconnect called.
-[2025-07-05 02:42:03] Ping to gateway 192.168.1.1: Success
-[2025-07-05 02:42:03] Ping to internet target www.google.com: Success
-[2025-07-05 02:42:03] Wi-Fi reconnected successfully.
-[2025-07-05 02:42:03] Reconnect attempt triggered.
-[2025-07-05 02:42:53] App started. Monitoring SSID: goldenwifi
-[2025-07-05 03:06:40] App started. Monitoring SSID: goldenwifi
-[2025-07-05 03:07:02] App started. Monitoring SSID: goldenwifi
-[2025-07-05 03:07:34] App started. Monitoring SSID: goldenwifi
-[2025-07-05 03:08:52] Ping to www.google.com failed.
-[2025-07-05 03:08:54] App started. Monitoring SSID: goldenwifi
-[2025-07-05 03:08:55] Ping to www.google.com failed.
-[2025-07-05 03:08:57] Wi-Fi disconnected. Attempting to reconnect.
-[2025-07-05 03:08:57] TryReconnect called.
-[2025-07-05 03:09:15] Ping to gateway 192.168.1.1: Success
-[2025-07-05 03:09:15] Ping to internet target www.google.com: Success
-[2025-07-05 03:09:15] Wi-Fi reconnected successfully.
-[2025-07-05 03:09:15] Reconnect attempt triggered.
+[2025-07-05 06:19:48] App started. Monitoring SSID: goldenwifi
+[2025-07-05 20:48:49] App started. Monitoring SSID: goldenwifi
+[2025-07-06 00:28:04] App started. Monitoring SSID: goldenwifi
+[2025-07-06 00:29:30] App started. Monitoring SSID: goldenwifi
+[2025-07-06 00:29:34] App started. Monitoring SSID: goldenwifi
+[2025-07-06 00:36:55] First-run: User selected SSID 'goldenwifi' for protection.
+[2025-07-06 00:36:55] App started. Monitoring SSID: goldenwifi
+[2025-07-06 00:37:12] App started. Monitoring SSID: goldenwifi
+[2025-07-06 00:41:39] App started. Monitoring SSID: goldenwifi
+[2025-07-06 00:42:08] App started. Monitoring SSID: goldenwifi
+[2025-07-06 00:43:42] Ping to www.google.com failed.
+[2025-07-06 00:43:45] Ping to www.google.com failed.
+[2025-07-06 00:43:46] Wi-Fi disconnected. Attempting to reconnect.
+[2025-07-06 00:43:46] TryReconnect called.
+[2025-07-06 00:44:00] Ping to internet target www.google.com: Fail
+[2025-07-06 00:44:00] Wi-Fi reconnect failed.
+[2025-07-06 00:44:00] Reconnect attempt triggered.
+[2025-07-06 00:44:02] Ping to www.google.com failed.
+[2025-07-06 00:44:05] Ping to www.google.com failed.
+[2025-07-06 00:44:07] Wi-Fi disconnected. Attempting to reconnect.
+[2025-07-06 00:44:07] TryReconnect called.
+[2025-07-06 00:44:23] Ping to www.google.com failed.
+[2025-07-06 00:44:25] App started. Monitoring SSID: goldenwifi
+[2025-07-06 00:44:26] Ping to www.google.com failed.
+[2025-07-06 00:44:28] Wi-Fi disconnected. Attempting to reconnect.
+[2025-07-06 00:44:28] TryReconnect called.
+[2025-07-06 00:44:38] Ping to internet target www.google.com: Fail
+[2025-07-06 00:44:38] Wi-Fi reconnect failed.
+[2025-07-06 00:44:38] Reconnect attempt triggered.
+[2025-07-06 00:44:40] Ping to www.google.com failed.
+[2025-07-06 00:44:43] Ping to www.google.com failed.
+[2025-07-06 00:44:44] Wi-Fi disconnected. Attempting to reconnect.
+[2025-07-06 00:44:44] TryReconnect called.
+[2025-07-06 00:45:06] Ping to www.google.com failed.
+[2025-07-06 00:45:08] App started. Monitoring SSID: goldenwifi
+[2025-07-06 00:45:10] Ping to www.google.com failed.
+[2025-07-06 00:45:11] Wi-Fi disconnected. Attempting to reconnect.
+[2025-07-06 00:45:11] TryReconnect called.
+[2025-07-06 00:45:21] Ping to internet target www.google.com: Fail
+[2025-07-06 00:45:21] Wi-Fi reconnect failed.
+[2025-07-06 00:45:21] Reconnect attempt triggered.
+[2025-07-06 00:45:23] Ping to www.google.com failed.
+[2025-07-06 00:45:26] Ping to www.google.com failed.
+[2025-07-06 00:45:27] Wi-Fi disconnected. Attempting to reconnect.
+[2025-07-06 00:45:27] TryReconnect called.
+[2025-07-06 00:45:40] Ping to internet target www.google.com: Fail
+[2025-07-06 00:45:40] Wi-Fi reconnect failed.
+[2025-07-06 00:45:40] Reconnect attempt triggered.
+[2025-07-06 00:45:42] Ping to www.google.com failed.
+[2025-07-06 00:45:45] Ping to www.google.com failed.
+[2025-07-06 00:45:47] Wi-Fi disconnected. Attempting to reconnect.
+[2025-07-06 00:45:47] TryReconnect called.
+[2025-07-06 00:46:02] Ping to gateway 192.168.1.1: Success
+[2025-07-06 00:46:02] Ping to internet target www.google.com: Success
+[2025-07-06 00:46:02] Wi-Fi reconnected successfully.
+[2025-07-06 00:46:02] Reconnect attempt triggered.
+[2025-07-06 01:41:36] App started. Monitoring SSID: goldenwifi
+[2025-07-06 04:54:59] App started. Monitoring SSID: goldenwifi
+[2025-07-06 04:55:49] First-run: User selected SSID 'goldenwifi' for protection.
+[2025-07-06 04:55:49] App started. Monitoring SSID: goldenwifi
+[2025-07-06 05:03:23] App started. Monitoring SSID: goldenwifi
+[2025-07-06 05:04:04] First-run: User selected SSID 'goldenwifi' for protection.
+[2025-07-06 05:04:04] App started. Monitoring SSID: goldenwifi
+[2025-07-06 05:10:58] First-run: User selected SSID 'goldenwifi' for protection.
+[2025-07-06 05:10:58] App started. Monitoring SSID: goldenwifi
+[2025-07-06 05:11:42] App started. Monitoring SSID: goldenwifi
+[2025-07-06 05:12:30] First-run: User selected SSID 'goldenwifi' for protection.
+[2025-07-06 05:12:30] App started. Monitoring SSID: goldenwifi
+[2025-07-06 05:13:12] First-run: User selected SSID 'goldenwifi' for protection.
+[2025-07-06 05:13:13] Ping to www.google.com failed.
+[2025-07-06 05:13:14] App started. Monitoring SSID: goldenwifi
+[2025-07-06 05:13:16] Ping to www.google.com failed.
+[2025-07-06 05:13:17] Wi-Fi disconnected. Attempting to reconnect.
+[2025-07-06 05:13:17] TryReconnect called.
+[2025-07-06 05:13:33] Ping to gateway 192.168.1.1: Success
+[2025-07-06 05:13:33] Ping to internet target www.google.com: Success
+[2025-07-06 05:13:33] Wi-Fi reconnected successfully.
+[2025-07-06 05:13:33] Reconnect attempt triggered.
+[2025-07-06 05:14:54] App started. Monitoring SSID: goldenwifi
+[2025-07-06 05:16:24] First-run: User selected SSID 'goldenwifi' for protection.
+[2025-07-06 05:28:58] App started. Monitoring SSID: goldenwifi
+[2025-07-06 05:29:35] First-run: User selected SSID 'goldenwifi' for protection.
+[2025-07-06 05:29:35] App started. Monitoring SSID: goldenwifi
+[2025-07-06 05:33:52] First-run: User selected SSID 'goldenwifi' for protection.
+[2025-07-06 05:33:52] App started. Monitoring SSID: goldenwifi
+[2025-07-06 05:42:23] First-run: User selected SSID 'iPhone' for protection.
+[2025-07-06 05:42:23] Ping to www.google.com succeeded.
+[2025-07-06 05:42:23] App started. Monitoring SSID: iPhone
+[2025-07-06 05:42:24] Ping to www.google.com succeeded.
+[2025-07-06 05:42:26] Ping to www.google.com succeeded.
+[2025-07-06 05:42:28] Ping to www.google.com succeeded.
+[2025-07-06 05:42:29] Ping to www.google.com succeeded.
+[2025-07-06 05:42:31] Ping to www.google.com succeeded.
+[2025-07-06 05:42:32] Ping to www.google.com succeeded.
+[2025-07-06 05:42:34] Ping to www.google.com succeeded.
+[2025-07-06 05:42:36] Ping to www.google.com succeeded.
+[2025-07-06 05:42:37] Ping to www.google.com succeeded.
+[2025-07-06 05:42:39] Ping to www.google.com succeeded.
+[2025-07-06 05:42:42] Ping to www.google.com succeeded.
+[2025-07-06 05:42:43] Ping to www.google.com succeeded.
+[2025-07-06 05:42:45] Ping to www.google.com succeeded.
+[2025-07-06 05:42:47] Ping to www.google.com succeeded.
+[2025-07-06 05:42:48] Ping to www.google.com succeeded.
+[2025-07-06 05:42:50] Ping to www.google.com succeeded.
+[2025-07-06 05:42:51] Ping to www.google.com succeeded.
+[2025-07-06 05:42:53] Ping to www.google.com succeeded.
+[2025-07-06 05:42:55] Ping to www.google.com succeeded.
+[2025-07-06 05:42:56] Ping to www.google.com succeeded.
+[2025-07-06 05:42:58] Ping to www.google.com succeeded.
+[2025-07-06 05:42:59] Ping to www.google.com succeeded.
+[2025-07-06 05:43:01] Ping to www.google.com succeeded.
+[2025-07-06 05:43:03] Ping to www.google.com succeeded.
+[2025-07-06 05:43:04] Ping to www.google.com succeeded.
+[2025-07-06 05:43:06] Ping to www.google.com succeeded.
+[2025-07-06 05:43:07] Ping to www.google.com succeeded.
+[2025-07-06 05:43:09] Ping to www.google.com succeeded.
+[2025-07-06 05:43:11] Ping to www.google.com succeeded.
+[2025-07-06 05:43:12] Ping to www.google.com succeeded.
+[2025-07-06 05:43:14] Ping to www.google.com succeeded.
+[2025-07-06 05:43:15] Ping to www.google.com succeeded.
+[2025-07-06 05:43:17] Ping to www.google.com succeeded.
+[2025-07-06 05:43:19] Ping to www.google.com succeeded.
+[2025-07-06 05:43:20] Ping to www.google.com succeeded.
+[2025-07-06 05:43:22] Ping to www.google.com succeeded.
+[2025-07-06 05:43:23] Ping to www.google.com succeeded.
+[2025-07-06 05:43:25] Ping to www.google.com succeeded.
+[2025-07-06 05:43:26] Ping to www.google.com succeeded.
+[2025-07-06 05:43:28] Ping to www.google.com succeeded.
+[2025-07-06 05:43:30] Ping to www.google.com succeeded.
+[2025-07-06 05:43:32] Ping to www.google.com succeeded.
+[2025-07-06 05:43:33] Ping to www.google.com succeeded.
+[2025-07-06 05:43:35] Ping to www.google.com succeeded.
+[2025-07-06 05:43:36] Ping to www.google.com succeeded.
+[2025-07-06 05:43:38] Ping to www.google.com succeeded.
+[2025-07-06 05:43:40] Ping to www.google.com succeeded.
+[2025-07-06 05:43:41] Ping to www.google.com succeeded.
+[2025-07-06 05:43:43] Ping to www.google.com succeeded.
+[2025-07-06 05:43:45] Ping to www.google.com succeeded.
+[2025-07-06 05:43:46] Ping to www.google.com succeeded.
+[2025-07-06 05:43:48] Ping to www.google.com succeeded.
+[2025-07-06 05:43:50] Ping to www.google.com succeeded.
+[2025-07-06 05:43:51] Ping to www.google.com succeeded.
+[2025-07-06 05:44:07] Ping to www.google.com failed.
+[2025-07-06 05:44:08] App started. Monitoring SSID: iPhone
+[2025-07-06 05:44:10] Ping to www.google.com failed.
+[2025-07-06 05:44:12] Wi-Fi disconnected. Attempting to reconnect.
+[2025-07-06 05:44:12] TryReconnect called.
+[2025-07-06 05:44:28] Ping to internet target www.google.com: Fail
+[2025-07-06 05:44:28] Wi-Fi reconnect failed.
+[2025-07-06 05:44:28] Reconnect attempt triggered.
+[2025-07-06 05:45:27] First-run: User selected SSID 'goldenwifi' for protection.
+[2025-07-06 05:45:27] App started. Monitoring SSID: goldenwifi
+[2025-07-06 05:55:04] First-run: User selected SSID 'goldenwifi' for protection.
+[2025-07-06 05:55:04] App started. Monitoring SSID: goldenwifi

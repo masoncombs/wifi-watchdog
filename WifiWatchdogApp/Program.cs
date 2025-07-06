@@ -11,21 +11,41 @@ namespace WifiWatchdogApp
         [STAThread]
         static void Main(string[] args)
         {
-            if (!IsAdministrator())
+            // Single-instance Mutex to prevent multiple tray icons
+            bool createdNew;
+            using (var mutex = new System.Threading.Mutex(true, "WifiWatchdogApp_SingleInstance", out createdNew))
             {
-                // Optionally show a message, or just exit silently
-                MessageBox.Show(
-                    "Wi-Fi Watchdog must be run as administrator. Please use the launcher.",
-                    "Wi-Fi Watchdog",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
-                return;
+                if (!createdNew)
+                {
+                    // Already running, exit silently
+                    return;
+                }
+
+                if (!IsAdministrator())
+                {
+                    MessageBox.Show(
+                        "Wi-Fi Watchdog must be run as administrator. Please use the launcher.",
+                        "Wi-Fi Watchdog",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                    return;
+                }
+
+                bool isFirstRunOnly = args != null && args.Length > 0 && args[0] == "--firstrun";
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                if (isFirstRunOnly)
+                {
+                    // Only do first-run setup, then exit
+                    var ctx = new TrayAppContext(true); // pass flag for first-run only
+                    // TrayAppContext will exit after setup
+                }
+                else
+                {
+                    Application.Run(new TrayAppContext());
+                }
             }
-            // If admin, skip popup and start monitoring
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TrayAppContext());
         }
 
         private static bool IsAdministrator()

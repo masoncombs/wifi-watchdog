@@ -15,12 +15,12 @@ namespace WifiWatchdogApp
     {
         private NotifyIcon trayIcon;
         private System.Timers.Timer checkTimer;
-        private string ssid = "goldenwifi";
-        private string adapter = "Wi-Fi";
-        private string wifiPassword = "";
+        private string ssid; // No default, will be set from settings or first-run
+        private string wifiPassword;
         private int ssidFailCount = 0;
         private bool runAtStartup = false;
         private string launcherPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "WifiWatchdogLauncher.exe");
+        private string adapter = "Wi-Fi"; // Default adapter name, can be made user-configurable
 
         private bool notifyReconnect = true;
         private bool notifySuccess = true;
@@ -32,9 +32,46 @@ namespace WifiWatchdogApp
 
         private DebugLog debugLog;
 
-        public TrayAppContext()
+        public TrayAppContext(bool firstRunOnly = false)
         {
             debugLog = new DebugLog(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "WifiWatchdog_DebugLog.txt"));
+
+            // First-run Wi-Fi selection logic
+            ssid = Properties.Settings.Default.ProtectedSsid;
+            wifiPassword = Properties.Settings.Default.ProtectedWifiPassword;
+            if (!Properties.Settings.Default.FirstRunComplete || string.IsNullOrWhiteSpace(ssid))
+            {
+                // Show new FirstRunForm for first-run Wi-Fi selection
+                string[] availableSSIDs = WifiUtils.GetAvailableSSIDs();
+                using (var form = new FirstRunForm(availableSSIDs))
+                {
+                    form.Text = "First Time Wi-Fi Setup";
+                    form.StartPosition = FormStartPosition.CenterScreen;
+                    form.ShowInTaskbar = true;
+                    if (form.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(form.SelectedSSID))
+                    {
+                        ssid = form.SelectedSSID;
+                        wifiPassword = form.WifiPassword;
+                        Properties.Settings.Default.ProtectedSsid = ssid;
+                        Properties.Settings.Default.ProtectedWifiPassword = wifiPassword;
+                        Properties.Settings.Default.FirstRunComplete = true;
+                        Properties.Settings.Default.Save();
+                        debugLog.Log($"First-run: User selected SSID '{ssid}' for protection.");
+                    }
+                    else
+                    {
+                        // User cancelled, exit app
+                        Application.Exit();
+                        return;
+                    }
+                }
+                if (firstRunOnly)
+                {
+                    // After first run, exit so launcher can continue
+                    Application.Exit();
+                    return;
+                }
+            }
 
             // Load user settings
             notifyReconnect = Properties.Settings.Default.NotifyReconnect;

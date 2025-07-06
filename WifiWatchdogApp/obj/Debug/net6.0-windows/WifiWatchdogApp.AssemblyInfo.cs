@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WifiWatchdogApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5ee5eb79cb146f561ac43d32c21f27c12ad24cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c88cc896e4a9677697e0e14e3fe1bd9eed012113")]
 [assembly: System.Reflection.AssemblyProductAttribute("WifiWatchdogApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WifiWatchdogApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

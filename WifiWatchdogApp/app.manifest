@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- TEMP: test-branch visibility marker, safe to remove -->
 <assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1">
   <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
     <security>
